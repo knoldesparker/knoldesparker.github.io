@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="description" content="KEA Tech">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Casper S">
+        <link rel="stylesheet" type="text/css" media="screen" href="./libraries/css/bootstrap.min.css" />
+        <script src="./libraries/js/bootstrap.min.js"></script>
+        <script src="./libraries/js/jquery-3.0.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <title>index</title>
+    <script>
+  $(function() {
+    $( "#inputNumber" ).focus();
+
+    $( "#inputNumber" ).keyup(function()
+    {
+     var i;
+     var result=0;
+     var num=$("#inputNumber").val();
+
+     for (i = 0; i < num.length; ++i)
+     {
+      // omregn fra bin til dec
+      result = result + Math.pow(2, i) * num[i];
+     }
+
+    $("#Resultat").html(result);
+    });
+
+        $("#inputNumber").keydown(function (e)
+        {
+         // Tillad: backspace, delete, tab, escape, enter
+         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+             // Tillad: Ctrl+A, Command+A
+            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Tillad: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // Lad det ske, og lad være med at gøre noget
+                 return;
+        }
+
+        // Sørg for det er et tal og stop tastetrykket default handling
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 49)) && (e.keyCode < 96 || e.keyCode > 105))
+        {
+            e.preventDefault();
+        }
+    });
+  });
+    </script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+    </div>
+</nav>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Casp1783 Tech HTML</h1>
+            <p>HTML der bliver lavet i Tech 2.semester</p>
+        </div>
+    </div>
+<div class="container">
+    <h1 class="">Denne side kan lave bit om til tal!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label>Indtast dine binær tal</label>
+                        <input type="text" class="form-control" id="inputNumber" placeholder="Enter numbers">
+                        <small id="numberHelp" class="form-text text-muted">Dette felt kan kun modtage tal</small>
+                    </div>
+                </form>
+            </div>
+            <div class="col" id="Resultat">
+                Ukendt tal
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</body>
+</html>
