@@ -35,7 +35,7 @@
                             <div class="col-sm" data-toggle="modal" data-target="#ez2">
                                 <img src="./images/ram.png" id="ram" title="RAM" class="img-thumbnail">
                             </div>
-                            <div class="col-sm">
+                            <div class="col-sm" data-toggle="modal" data-target="#ez3">
                                 <img src="./images/disk.jpg" id="HDD" title="Hard Disk Drive" class="img-thumbnail">
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                     </main>
                     
 <footer class="container"> <p>&copy; Casp1738 2017-2018</p> </footer>
- <!-- Modal -->
+ <!-- CPU Modal -->
  <div class="modal fade" id="ez" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -93,25 +93,57 @@
           </div>
         </div>
       </div>
-       <!-- Modal -->
+       <!-- RAM Modal -->
  <div class="modal fade" id="ez2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">RAM - Random Access Memory</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              fdsfsdffsfsdfssd
+                <p>RAM (akronym for Random Access Memory) er arbejdshukommelse i computere.</p>
+                <p>RAM er det sted i en computer, hvor styresystemkomponenter, computerprogrammer og anden data der bliver brugt meget bliver opbevaret, så der er hurtig adgang til dem. Fordelen ved RAM er, at det er meget hurtigere at læse fra og skrive til end en harddisk, cd-rom eller diskettedrev.</p>
+                <p>RAM er flygtigt. Det betyder at til forskel fra f.eks. en harddisk mister RAM'en al data der har været lagret i den når computeren afbrydes.</p>
+                <p>Faktisk kan man sammenligne RAM med modellen af menneskets korttidshukommelse, den kan også kun klare en vis mængde information på en gang, derefter er den nødt til at rydde op og måske lægge noget ned i langtidshukommelsen, som f.eks kan være en harddisk, diskdrev og USB-nøgle.</p>
+                <p>Når computerens styresystem bedes om at allokere hukommelse, når der ikke er mere ledig RAM, vil det muligvis ty til swapping.</p>
+                <hr>
+                <h4>Statisk og dynamisk RAM</h4>
+                <p>Der findes forskellige måder at lave denne type hukommelse på, og i grove træk skelner man mellem dynamisk og statisk RAM</p>
+                <p>I dynamisk RAM eller DRAM, "huskes" hver bit af en kondensator, som lades op eller "tømmes" for elektrisk ladning alt efter om pågældende bit skal være "0" eller "1". Fordelen ved denne type RAM er, at der kræves færre komponenter (blot én enkelt kondensator) pr. bit "lagerplads" end i statisk RAM, men da kondensatorerne har en ganske lille kapacitet og i praksis ikke kan gøres helt tabsfri, vil de opladede kondensatorer "glemme" deres indhold i løbet af ganske få millisekunder. Derfor kræver dynamisk RAM et såkaldt refreshing-kredsløb, som med ganske korte intervaller læser hver eneste bit, og sørger for at "genfylde" de ladede kondensatorer.</p>
+                <p>Statisk RAM eller SRAM, består af en flip-flop for hver bit der skal kunne "opbevares". Det kræver flere komponenter for den samme mængde "data-lagerplads" end dynamisk RAM, og vil derfor være dyrere. Det nødvendige mikrochip areal er typisk en faktor 4 større for samme teknologi stade. Til gengæld kræves der ikke noget kredsløb til refreshing.</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
-      </div>                                                                                      
+      </div>
+        <!-- RAM Modal -->
+ <div class="modal fade" id="ez3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">HDD - Harddisk Drive</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>Harddisk (også disk, fastpladelager, baggrundslager) er en almindelig brugt betegnelse for disk. Da den diskenhed en pc er udstyret med, er anbragt i et kabinet (sammen med andre enheder), benyttes betegnelsen også fejlagtigt for kabinettet med indhold.</p>
+                <p>En harddisk består af 1-6 magnetiske plader, der bruges til opbevaring af data i binær form. Harddisken har et læsehoved til at læse og skrive data, og (i moderne harddiske) en "voice coil" til at drive læsehovedet hen over diskene. En harddisk er ligeledes non-volatil, hvilket betyder, at alle data bibeholdes selvom computeren er slukket.</p>
+                <hr>
+                <h3>Teknologi</h3>
+                <p>Der er altid ét hoved for hver overflade i en harddisk, og i dag skrives data på begge sider af pladerne. Armen med læsehovederne bevæger sig næsten i en halvcirkel hen over pladerne, hvilket giver mulighed for at hovedet kan nå alle områder på pladerne. Armen bliver styret ved hjælp af to neodymium-magneter (Voice coil) eller førhen af en stepmotor.</p>
+                <p>Harddiskens plader er delt ind i små, nanometer-store magnetiske regioner, der hver bliver brugt til at indkode et enkelt binært tal. I nutidens harddiske består hver af disse regioner af få hundrede magnetiske "korn". Hver region skaber magnetiske poler, der skaber et lokaliseret magnetfelt. Skrivehovedet skaber et magnetfelt og magnetiserer således det område på pladen, hvor dataene skal ligge</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>                                                                                                                                                         
 </body>
 </html>
